@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Alphabets">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Aphorism">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Author">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AuthorName" Type="varchar(max)" />
+    <Property Name="BookName" Type="varchar(max)" />
+    <Property Name="AuthorImage" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Organ">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrganName" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="TabletDescription">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tablet_ID" Type="int" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="Image" Type="varchar(max)" />
+    <Property Name="AuthorID" Type="int" />
+    <Property Name="OrganID" Type="int" />
+  </EntityType>
+  <EntityType Name="Tablets">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tab_Name" Type="varchar(max)" />
+    <Property Name="Alphabate_ID" Type="int" />
+  </EntityType>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="Alphabets" EntityType="Self.Alphabets" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Aphorism" EntityType="Self.Aphorism" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Author" EntityType="Self.Author" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Organ" EntityType="Self.Organ" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TabletDescription" EntityType="Self.TabletDescription" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tablets" EntityType="Self.Tablets" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

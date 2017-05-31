@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="DBEntities">
+    <EntitySetMapping Name="Alphabets">
+      <EntityTypeMapping TypeName="Model.Alphabet">
+        <MappingFragment StoreEntitySet="Alphabets">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Aphorism">
+      <EntityTypeMapping TypeName="Model.Aphorism">
+        <MappingFragment StoreEntitySet="Aphorism">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Authors">
+      <EntityTypeMapping TypeName="Model.Author">
+        <MappingFragment StoreEntitySet="Author">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AuthorName" ColumnName="AuthorName" />
+          <ScalarProperty Name="BookName" ColumnName="BookName" />
+          <ScalarProperty Name="AuthorImage" ColumnName="AuthorImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Organs">
+      <EntityTypeMapping TypeName="Model.Organ">
+        <MappingFragment StoreEntitySet="Organ">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OrganName" ColumnName="OrganName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TabletDescriptions">
+      <EntityTypeMapping TypeName="Model.TabletDescription">
+        <MappingFragment StoreEntitySet="TabletDescription">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Tablet_ID" ColumnName="Tablet_ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+          <ScalarProperty Name="OrganID" ColumnName="OrganID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tablets">
+      <EntityTypeMapping TypeName="Model.Tablet">
+        <MappingFragment StoreEntitySet="Tablets">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Tab_Name" ColumnName="Tab_Name" />
+          <ScalarProperty Name="Alphabate_ID" ColumnName="Alphabate_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
